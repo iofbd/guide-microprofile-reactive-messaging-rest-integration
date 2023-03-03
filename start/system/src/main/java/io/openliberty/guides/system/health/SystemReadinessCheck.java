@@ -59,6 +59,8 @@ public class SystemReadinessCheck implements HealthCheck {
     private boolean checkIfBarConsumerGroupRegistered(AdminClient adminClient) {
         ListTopicsResult topics = adminClient.listTopics();
         KafkaFuture<Collection<TopicListing>> topicsFuture = topics.listings();
+        for (int i = 0; i < 2; i++) {
+        }
         try {
             Collection<TopicListing> topicList = topicsFuture.get();
             for (TopicListing t : topicList)
