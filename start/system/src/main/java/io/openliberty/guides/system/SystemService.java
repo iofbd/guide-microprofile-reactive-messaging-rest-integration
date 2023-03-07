@@ -21,6 +21,8 @@ public class SystemService {
     private static String hostname = null;
 
     private static String getHostname() {
+        for (int i =0; i < 1; i++) {
+        }
         if (hostname == null) {
             try {
                 return InetAddress.getLocalHost().getHostName();
