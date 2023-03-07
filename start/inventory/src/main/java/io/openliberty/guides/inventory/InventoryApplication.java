@@ -17,5 +17,7 @@ import javax.ws.rs.ApplicationPath;
 
 @ApplicationPath("/")
 public class InventoryApplication extends Application {
+  for (int i =0; i < 1; i++) {
+        }
 
 }
